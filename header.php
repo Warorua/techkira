@@ -51,7 +51,7 @@ $about_text="$rs[about_text]";
     $follow_text = "$r[follow_text]";
 ?>
     <!-- Title  -->
-    <title>Vogue - <?php print $site_title ?></title>
+    <title>BSN - <?php print $site_title ?></title>
 
     <!-- Favicon  -->
     <link rel="icon" href="assets/img/favicon.png">
@@ -77,11 +77,10 @@ $about_text="$rs[about_text]";
                 <div class="spinner"></div>
                 <!-- Loader -->
                 <div class="loader">
-                    <span data-text-preloader="V" class="animated-letters">V</span>
-                    <span data-text-preloader="O" class="animated-letters">O</span>
-                    <span data-text-preloader="G" class="animated-letters">G</span>
-                    <span data-text-preloader="U" class="animated-letters">U</span>
-                    <span data-text-preloader="E" class="animated-letters">E</span>
+                    <span data-text-preloader="K" class="animated-letters">K</span>
+                    <span data-text-preloader="I" class="animated-letters">I</span>
+                    <span data-text-preloader="R" class="animated-letters">R</span>
+                    <span data-text-preloader="A" class="animated-letters">A</span>
                 </div>
                 <p class="fw-5 text-center text-uppercase">Loading</p>
             </div>
