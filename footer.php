@@ -85,7 +85,7 @@ print "
 
                                 <div class="copyright-left"><?php print $site_footer ?></div>
                                 <!-- Copyright Right -->
-                                <div class="copyright-right">Made with <i class="fas fa-heart"></i> By <a href="https://facebook.com/hillsoftsnetwork">Hillsofts</a></div>
+                                <div class="copyright-right">Developed with <i class="fas fa-heart"></i> By <a href="https://techkira.net/">TechKira Limited</a></div>
                             </div>
                         </div>
                     </div>
