@@ -5,3 +5,40 @@ RewriteRule    ^about/?$    about.php    [NC,L]
 RewriteRule    ^services/?$    services.php    [NC,L]
 RewriteRule    ^contact/?$    contact.php    [NC,L]
 RewriteRule    ^portfolio/?$    portfolio.php    [NC,L]
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+Header always set Content-Security-Policy: upgrade-insecure-requests
+
+
+# To make the link https://localhost/kever/list_data.php?name=alex appear as https://localhost/kever/list_data/alex,
+RewriteRule ^kever/list_data/(.*)$ kever/list_data.php?name=$1 [L]
+
+
+
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Disable directory browsing 
+Options -Indexes
+
+# Hide files of type .png, .zip, .jpg, .gif and .doc from listing
+IndexIgnore *.png *.zip *.jpg *.gif *.doc
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Speed Up 
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+
+Header set Cache-Control "max-age=2592000"
+
+</FilesMatch>
